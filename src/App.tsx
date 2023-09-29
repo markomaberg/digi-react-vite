@@ -1,22 +1,18 @@
-import { DigiButton } from "@digi/arbetsformedlingen-react";
+import { DigiExpandableAccordion, DigiLayoutBlock, DigiTypography, DigiTypographyHeadingJumbo } from "@digi/arbetsformedlingen-react";
 import "./App.css";
 
 function App() {
 
   return (
     <div className="App">
-      <digi-typography>
-        <h1>@digi + Vite + React</h1>
-      </digi-typography>
-      
-      <div className="toggle-buttons">
-        <DigiButton 
-          afVariation="secondary"
-          onAfOnClick={() => console.log('click')}
-        >
-          Knapp
-        </DigiButton>
-      </div>
+      <DigiTypography>
+        <DigiLayoutBlock>
+          <DigiTypographyHeadingJumbo afText="Digi + React + Vite" />
+          <DigiExpandableAccordion afHeading="Information">
+            <p>This is a repository running Digi components in React with Vite</p>
+          </DigiExpandableAccordion>
+        </DigiLayoutBlock>
+      </DigiTypography>
     </div>
   );
 }
